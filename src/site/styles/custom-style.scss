@@ -11,3 +11,16 @@ body {
     //   color: black;
     //  }
 }
+/* بداية كود التعديل العربي - هادي */
+
+html, body, #__next, .main-content {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.sidebar, .nav-menu {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+/* نهاية كود التعديل العربي - هادي */
