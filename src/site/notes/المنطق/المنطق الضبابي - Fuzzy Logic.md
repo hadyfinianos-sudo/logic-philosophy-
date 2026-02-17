@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/almntq/almntq-aldbaby-fuzzy-logic/","noteIcon":"","created":"2026-02-15T15:58:18.000+03:00","updated":"2026-02-17T20:03:23.000+03:00"}
+{"dg-publish":true,"permalink":"/almntq/almntq-aldbaby-fuzzy-logic/"}
 ---
 
 <div dir="rtl">
