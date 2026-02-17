@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/almntq/almntq-almtsq-coherentism/"}
+{"dg-publish":true,"permalink":"/almntq/almntq-almtsq-coherentism/","noteIcon":"","created":"2026-02-10T20:57:46.000+03:00","updated":"2026-02-16T19:59:14.000+03:00"}
 ---
 
 # ​[[المنطق/المنطق المتسق - Coherentism\|المنطق المتسق - Coherentism]]

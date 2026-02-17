@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/almntq/almntq-aljhy-modal-logic/"}
+{"dg-publish":true,"permalink":"/almntq/almntq-aljhy-modal-logic/","noteIcon":"","created":"2026-02-15T16:14:13.000+03:00","updated":"2026-02-17T20:01:03.000+03:00"}
 ---
 
 <div dir="rtl">

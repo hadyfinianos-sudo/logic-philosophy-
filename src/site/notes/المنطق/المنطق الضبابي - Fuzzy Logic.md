@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/almntq/almntq-aldbaby-fuzzy-logic/"}
+{"dg-publish":true,"permalink":"/almntq/almntq-aldbaby-fuzzy-logic/","noteIcon":"","created":"2026-02-15T15:58:18.000+03:00","updated":"2026-02-17T20:02:59.000+03:00"}
 ---
 
-<div dir="rtl">
+
 
 [[المنطق/المنطق الضبابي - Fuzzy Logic\|المنطق الضبابي - Fuzzy Logic]]
 [!abstract] المبدأ العام
@@ -27,4 +27,3 @@
 الثغرات الفلسفية (المفارقات والمنطق المتسق).
 الأدوات البديلة (المنطق الضبابي، قاعدة التبسيط، حجة الإمكان).
 المرجعية النهائية (المنطق والواقع).
-</div>
