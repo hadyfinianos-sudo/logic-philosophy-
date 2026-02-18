@@ -41,6 +41,6 @@ html, body, #__next, .main-content {
 }
 
 /* لضمان أن ملف الفهرس تحديداً هو أول شيء يراه المستخدم */
-[data-path*="الفهرس"] {
+[data-path*="index"] {
     order: 0 !important;
 }
