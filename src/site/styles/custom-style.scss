@@ -23,19 +23,22 @@ html, body, #__next, .main-content {
     text-align: right !important;
 }
 /* نهاية كود التعديل العربي - هادي */
-/* فرض الترتيب على القائمة الجانبية */
-.nav-view-content, .file-tree, .nav-folder-container {
+/* 1. كسر هيمنة اللون الأصلي للفهرس */
+.notelink.active-note .filename, 
+a.filename[href="/"],
+[data-path*="الفهرس"] a {
+    color: #ff0000 !important;
+    font-weight: 900 !important;
+}
+
+/* 2. إجبار القائمة على الترتيب ليكون الفهرس في القمة */
+.nav-view-content, .file-tree {
     display: flex !important;
     flex-direction: column !important;
 }
 
-/* رفع الفهرس للأعلى وتلوينه بالأحمر */
+/* استهداف الرابط الذي يؤدي للرئيسية (الفهرس) */
+div:has(> .notelink.active-note),
 [data-path*="الفهرس"] {
-    order: -999 !important;
-}
-
-[data-path*="الفهرس"] a {
-    color: #ff0000 !important;
-    font-weight: 900 !important;
-    font-size: 1.1em !important;
+    order: -100 !important;
 }
