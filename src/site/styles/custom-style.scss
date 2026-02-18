@@ -23,22 +23,23 @@ html, body, #__next, .main-content {
     text-align: right !important;
 }
 /* نهاية كود التعديل العربي - هادي */
-/* 1. كسر هيمنة اللون الأصلي للفهرس */
-.notelink.active-note .filename, 
-a.filename[href="/"],
-[data-path*="الفهرس"] a {
-    color: #ff0000 !important;
-    font-weight: 900 !important;
-}
-
-/* 2. إجبار القائمة على الترتيب ليكون الفهرس في القمة */
-.nav-view-content, .file-tree {
+/* 1. استهداف كل الحاويات الممكنة وتحويلها لنظام Flex */
+.nav-view-content, 
+.file-tree, 
+.nav-folder-container,
+.nav-section-content {
     display: flex !important;
     flex-direction: column !important;
 }
 
-/* استهداف الرابط الذي يؤدي للرئيسية (الفهرس) */
-div:has(> .notelink.active-note),
-[data-path*="الفهرس"] {
-    order: -100 !important;
+/* 2. إعطاء الفهرس أولوية قصوى للظهور في أول القائمة */
+[data-path*="الفهرس"], 
+div:has(> a[href="/"]),
+div:has(> a.active-note) {
+    order: -9999 !important;
+}
+
+/* 3. ضمان أن المجلدات تأتي بعده */
+.nav-folder {
+    order: 1 !important;
 }
