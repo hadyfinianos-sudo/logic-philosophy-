@@ -23,3 +23,13 @@ html, body, #__next, .main-content {
     text-align: right !important;
 }
 /* نهاية كود التعديل العربي - هادي */
+/* إخفاء الأرقام من أسماء المجلدات في القائمة */
+.nav-folder-title-content, .nav-item-title {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+    /* إزاحة النص لإخفاء أول حرفين (الأرقام والنقطة) */
+    text-indent: -1.2em; 
+    padding-left: 0;
+}
