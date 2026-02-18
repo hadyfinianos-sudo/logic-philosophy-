@@ -24,25 +24,24 @@ html, body, #__next, .main-content {
 }
 
 /* نهاية كود التعديل العربي - هادي */
-/* 1. تفعيل النظام المرن للحاوية */
-.nav-view-content {
+/* 1. استهداف حاوية القائمة الجانبية الرسمية */
+.folder-root, .file-tree {
     display: flex !important;
     flex-direction: column !important;
 }
 
-/* 2. رفع "الفهرس" وتلوينه بالأحمر كدليل واقعي */
-[data-path*="الفهرس"] {
+/* 2. رفع ملف الفهرس للأعلى باستخدام المسار البرمجي */
+div[data-path*="الفهرس"] {
     order: -10 !important;
+}
+
+/* 3. تلوين "الفهرس" بالأحمر لكسر قوة المتغيرات الأصلية */
+div[data-path*="الفهرس"] a {
     color: #ff0000 !important;
     font-weight: bold !important;
 }
 
-/* 3. رفع أي ملاحظة منفردة أخرى تحت الفهرس */
-.nav-file {
-    order: -1 !important;
-}
-
-/* 4. وضع المجلدات في الأسفل */
-.nav-folder {
-    order: 1 !important;
+/* 4. إجبار المجلدات على البقاء في الأسفل */
+.nav-folder, .folder-container {
+    order: 10 !important;
 }
