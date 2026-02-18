@@ -24,3 +24,23 @@ html, body, #__next, .main-content {
 }
 
 /* نهاية كود التعديل العربي - هادي */
+/* كود لرفع الملفات المنفردة فوق المجلدات في القائمة الجانبية */
+.nav-view-content {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* جعل الملاحظات (Files) تأخذ الأولوية 1 */
+.nav-file {
+    order: 1 !important;
+}
+
+/* جعل المجلدات (Folders) تأخذ الأولوية 2 (تظهر تحت الملفات) */
+.nav-folder {
+    order: 2 !important;
+}
+
+/* لضمان أن ملف الفهرس تحديداً هو أول شيء يراه المستخدم */
+[data-path*="الفهرس"] {
+    order: 0 !important;
+}
