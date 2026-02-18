@@ -23,21 +23,19 @@ html, body, #__next, .main-content {
     text-align: right !important;
 }
 /* نهاية كود التعديل العربي - هادي */
-/* 1. استهداف حاوية القائمة الجانبية الرسمية */
-
-/* استهداف مباشر وعنيف للعنصر */
-body .nav-view-content [data-path*="الفهرس"] {
-    order: -100 !important;
-    display: block !important;
-}
-
-body .nav-view-content [data-path*="الفهرس"] a {
-    color: #ff0000 !important;
-    font-weight: bold !important;
-}
-
-/* إجبار الحاوية على الخضوع للترتيب */
-body .nav-view-content {
+/* فرض الترتيب على القائمة الجانبية */
+.nav-view-content, .file-tree, .nav-folder-container {
     display: flex !important;
     flex-direction: column !important;
+}
+
+/* رفع الفهرس للأعلى وتلوينه بالأحمر */
+[data-path*="الفهرس"] {
+    order: -999 !important;
+}
+
+[data-path*="الفهرس"] a {
+    color: #ff0000 !important;
+    font-weight: 900 !important;
+    font-size: 1.1em !important;
 }
