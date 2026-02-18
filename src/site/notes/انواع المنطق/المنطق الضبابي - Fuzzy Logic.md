@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/anwae-almntq/almntq-aldbaby-fuzzy-logic/","updated":"2026-02-17T23:00:21.000+03:00"}
+{"dg-publish":true,"permalink":"/anwae-almntq/almntq-aldbaby-fuzzy-logic/"}
 ---
 
 [[انواع المنطق/المنطق الضبابي - Fuzzy Logic\|المنطق الضبابي - Fuzzy Logic]]

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/anwae-almntq/almntq-aljhy-modal-logic/","updated":"2026-02-17T22:39:03.000+03:00"}
+{"dg-publish":true,"permalink":"/anwae-almntq/almntq-aljhy-modal-logic/"}
 ---
 
 # [[انواع المنطق/المنطق الجهي - Modal Logic\|المنطق الجهي - Modal Logic]]
