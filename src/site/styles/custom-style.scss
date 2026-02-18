@@ -24,23 +24,23 @@ html, body, #__next, .main-content {
 }
 
 /* نهاية كود التعديل العربي - هادي */
-/* كود لرفع الملفات المنفردة فوق المجلدات في القائمة الجانبية */
+/* كود الترتيب النهائي - هادي */
 .nav-view-content {
     display: flex !important;
     flex-direction: column !important;
 }
 
-/* جعل الملاحظات (Files) تأخذ الأولوية 1 */
+/* رفع أي ملف يحتوي اسمه على كلمة الفهرس للقمة */
+[data-path*="الفهرس"] {
+    order: -2 !important;
+}
+
+/* جعل الملفات المنفردة تظهر أولاً */
 .nav-file {
-    order: 1 !important;
+    order: -1 !important;
 }
 
-/* جعل المجلدات (Folders) تأخذ الأولوية 2 (تظهر تحت الملفات) */
+/* جعل المجلدات تظهر في الأسفل */
 .nav-folder {
-    order: 2 !important;
-}
-
-/* لضمان أن ملف الفهرس تحديداً هو أول شيء يراه المستخدم */
-[data-path*="index"] {
-    order: 0 !important;
+    order: 1 !important;
 }
