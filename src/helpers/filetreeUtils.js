@@ -1,17 +1,22 @@
 // Natural sort comparison - handles numbers anywhere in the string
 const naturalCompare = (a, b) => {
-  const aLower = a.toLowerCase();
-  const bLower = b.toLowerCase();
+  // Strip .md extension for comparison so "file.md" and "file 2.md" compare as "file" vs "file 2"
+  const aClean = a.replace(/\.md$/i, '').toLowerCase();
+  const bClean = b.replace(/\.md$/i, '').toLowerCase();
 
   // Split into chunks of text and numbers
-  const aChunks = aLower.match(/(\d+|\D+)/g) || [];
-  const bChunks = bLower.match(/(\d+|\D+)/g) || [];
+  const aChunks = aClean.match(/(\d+|\D+)/g) || [];
+  const bChunks = bClean.match(/(\d+|\D+)/g) || [];
 
   const maxLen = Math.max(aChunks.length, bChunks.length);
 
   for (let i = 0; i < maxLen; i++) {
-    const aChunk = aChunks[i] || '';
-    const bChunk = bChunks[i] || '';
+    const aChunk = (aChunks[i] || '').trim();
+    const bChunk = (bChunks[i] || '').trim();
+
+    // If one side has no more chunks, it's the shorter/base name — sort it first
+    if (!aChunk && bChunk) return -1;
+    if (aChunk && !bChunk) return 1;
 
     const aIsNum = /^\d+$/.test(aChunk);
     const bIsNum = /^\d+$/.test(bChunk);
@@ -20,10 +25,15 @@ const naturalCompare = (a, b) => {
       // Compare as numbers
       const diff = parseInt(aChunk, 10) - parseInt(bChunk, 10);
       if (diff !== 0) return diff;
+    } else if (aIsNum && !bIsNum) {
+      // Numbers before text
+      return -1;
+    } else if (!aIsNum && bIsNum) {
+      return 1;
     } else {
-      // Compare as strings
-      if (aChunk < bChunk) return -1;
-      if (aChunk > bChunk) return 1;
+      // Compare as strings using localeCompare for proper Arabic/Unicode sorting
+      const cmp = aChunk.localeCompare(bChunk, undefined, { sensitivity: 'base' });
+      if (cmp !== 0) return cmp;
     }
   }
 
