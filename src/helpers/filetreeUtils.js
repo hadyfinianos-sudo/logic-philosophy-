@@ -68,11 +68,16 @@ const sortTree = (unsorted) => {
 
       return naturalCompare(a, b);
     })
-    .reduce((obj, key) => {
-      obj[key] = unsorted[key];
+        .reduce((obj, key) => {
+      // إذا كان مجلداً، نظف الاسم من الأرقام البادئة لغرض العرض فقط
+      const displayKey = unsorted[key].isFolder 
+        ? key.replace(/^(\d+[\s\-_.]*)/, '') 
+        : key;
 
+      obj[displayKey] = unsorted[key];
       return obj;
     }, {});
+  
 
   for (const key of Object.keys(orderedTree)) {
     if (orderedTree[key].isFolder) {
@@ -98,9 +103,13 @@ function getPermalinkMeta(note, key) {
     if (note.data.tags && note.data.tags.indexOf("gardenEntry") != -1) {
       permalink = "/";
     }    
-    if (note.data.title) {
+        if (note.data.title) {
       name = note.data.title;
-    }
+    } else {
+      // إزالة الأرقام والرموز البادئة من اسم الملف (مثل 01- اسم الملف)
+      name = name.replace(/^(\d+[\s\-_.]*)/, '');
+        }
+    
     if (note.data.noteIcon) {
       noteIcon = note.data.noteIcon;
     }
