@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/2-anwae-almntq/almntq-almtsq-coherentism/","updated":"2026-03-08T21:17:21.000+03:00"}
+{"dg-publish":true,"permalink":"/2-anwae-almntq/almntq-almtsq-coherentism/"}
 ---
 
 # ​[[2.انواع المنطق/المنطق المتسق - Coherentism\|المنطق المتسق - Coherentism]]
